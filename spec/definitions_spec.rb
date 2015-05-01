@@ -1,6 +1,6 @@
 require('rspec')
 require('definitions')
-#require('words')
+require('words')
 
 describe(Definitions) do
   before() do
@@ -20,13 +20,14 @@ describe('.all') do
     expect(Definitions.all()).to(eq([]))
   end
 end
-  
-# describe('#definition') do
-#   it('initially returns an empty array of definitions for dictionary') do
-#     test_def = Definitions.new("progeny of a luminary")
-#     test_def.save()
-#     expect(test_def.definition()).to(eq([test_def]))
-#   end
-# end
+
+describe('.clear') do
+  it('clears all the saved definitions from the class array') do
+    test_def = Definitions.new("progeny of a luminary")
+    test_def.save()
+    Definitions.clear()
+    expect(Definitions.all()).to(eq([]))
+  end
+end    
 
 end

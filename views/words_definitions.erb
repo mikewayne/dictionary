@@ -1,0 +1,8 @@
+<h1>Words and Definitions</h1>
+
+<h3>Here are the words and definitions in this dictionary: </h3>
+<ul>
+  <% @words.each() do |word| %>
+  <li><a href = "/words/<%= word() + ": " + definition() %></a></li>"
+  <% end %>
+</ul>  
