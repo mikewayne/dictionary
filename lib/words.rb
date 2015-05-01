@@ -6,6 +6,7 @@ class Words
   define_method(:initialize) do |word_name|
     @word_name = word_name
     #@order =
+    @words = []
     @definitions = []
   end
 
@@ -27,6 +28,10 @@ class Words
 
   define_method(:add_word) do |word|
     @words.push(word)
+  end
+
+  define_method(:words) do
+    @words
   end
 
   define_method(:add_definition) do |definition|

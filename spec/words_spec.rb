@@ -27,4 +27,12 @@ describe('.all') do
      expect(Words.all()).to(eq([]))
   end
 end
+
+describe('#words') do
+  it('initially returns an empty array of words for dictionary') do
+    test_word = Words.new("scion")
+    expect(test_word.words()).to(eq([]))
+  end
+end
+
 end
