@@ -3,8 +3,7 @@ class Words
   @@words = []
   #attr_reader(:word#, :definitions #,:order)
 
-  define_method(:initialize) do |word|
-    @add_word = add_word
+  define_method(:initialize) do |word_name|
     @word_name = word_name
     #@order =
     @definitions = []
@@ -36,6 +35,6 @@ class Words
 
   define_method(:definitions) do
     @definitions
-  end  
+  end
 
 end
